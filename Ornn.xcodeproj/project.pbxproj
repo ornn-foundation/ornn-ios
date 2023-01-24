@@ -28,6 +28,10 @@
 		F0A203D3297FA6C1002FB6B3 /* AlbumsUseCaseSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A203D2297FA6C1002FB6B3 /* AlbumsUseCaseSpy.swift */; };
 		F0A203D7297FA72A002FB6B3 /* AlbumsUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A203D6297FA72A002FB6B3 /* AlbumsUseCaseTests.swift */; };
 		F0A203D9297FA85E002FB6B3 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A203D8297FA85E002FB6B3 /* DataManager.swift */; };
+		F0A203DB297FC99C002FB6B3 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A203DA297FC99C002FB6B3 /* TodayView.swift */; };
+		F0A203DD297FC9E3002FB6B3 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A203DC297FC9E3002FB6B3 /* TabBarView.swift */; };
+		F0A203E1297FD25A002FB6B3 /* SheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A203E0297FD25A002FB6B3 /* SheetViewModel.swift */; };
+		F0A203E3297FDBF4002FB6B3 /* HotelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A203E2297FDBF4002FB6B3 /* HotelView.swift */; };
 		F0DF6AFD297E3FE100351C84 /* OrnnApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DF6AFC297E3FE100351C84 /* OrnnApp.swift */; };
 		F0DF6AFF297E3FE100351C84 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DF6AFE297E3FE100351C84 /* ContentView.swift */; };
 		F0DF6B01297E3FE300351C84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0DF6B00297E3FE300351C84 /* Assets.xcassets */; };
@@ -71,6 +75,10 @@
 		F0A203D2297FA6C1002FB6B3 /* AlbumsUseCaseSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsUseCaseSpy.swift; sourceTree = "<group>"; };
 		F0A203D6297FA72A002FB6B3 /* AlbumsUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsUseCaseTests.swift; sourceTree = "<group>"; };
 		F0A203D8297FA85E002FB6B3 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		F0A203DA297FC99C002FB6B3 /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
+		F0A203DC297FC9E3002FB6B3 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		F0A203E0297FD25A002FB6B3 /* SheetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetViewModel.swift; sourceTree = "<group>"; };
+		F0A203E2297FDBF4002FB6B3 /* HotelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelView.swift; sourceTree = "<group>"; };
 		F0DF6AF9297E3FE100351C84 /* Ornn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ornn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0DF6AFC297E3FE100351C84 /* OrnnApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrnnApp.swift; sourceTree = "<group>"; };
 		F0DF6AFE297E3FE100351C84 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -217,6 +225,21 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		F0A203DE297FD220002FB6B3 /* Today */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Today;
+			sourceTree = "<group>";
+		};
+		F0A203DF297FD231002FB6B3 /* Sheet */ = {
+			isa = PBXGroup;
+			children = (
+				F0A203E0297FD25A002FB6B3 /* SheetViewModel.swift */,
+			);
+			path = Sheet;
+			sourceTree = "<group>";
+		};
 		F0DF6AF0297E3FE100351C84 = {
 			isa = PBXGroup;
 			children = (
@@ -298,6 +321,8 @@
 		F0DF6B29297E540C00351C84 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				F0A203DA297FC99C002FB6B3 /* TodayView.swift */,
+				F0A203E2297FDBF4002FB6B3 /* HotelView.swift */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -305,6 +330,7 @@
 		F0DF6B2A297E541B00351C84 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				F0A203DC297FC9E3002FB6B3 /* TabBarView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -312,6 +338,8 @@
 		F0DF6B2B297E543C00351C84 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				F0A203DF297FD231002FB6B3 /* Sheet */,
+				F0A203DE297FD220002FB6B3 /* Today */,
 				F0A203BE297F8798002FB6B3 /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
@@ -510,9 +538,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0A203AE297E8FA9002FB6B3 /* AlbumsApi.swift in Sources */,
+				F0A203DB297FC99C002FB6B3 /* TodayView.swift in Sources */,
 				F0A203C4297F9640002FB6B3 /* Bundle.swift in Sources */,
 				F0A203C1297F8C3A002FB6B3 /* AlbumModel.swift in Sources */,
+				F0A203E1297FD25A002FB6B3 /* SheetViewModel.swift in Sources */,
 				F0A203BF297F8799002FB6B3 /* HomeViewModel.swift in Sources */,
+				F0A203E3297FDBF4002FB6B3 /* HotelView.swift in Sources */,
 				F03DC92C297E6A6F00561829 /* AlbumsResponse.swift in Sources */,
 				F0A203B5297E9E52002FB6B3 /* BaseURL.swift in Sources */,
 				F0DF6AFF297E3FE100351C84 /* ContentView.swift in Sources */,
@@ -521,6 +552,7 @@
 				F0A203B7297EA0C5002FB6B3 /* AlbumsRepository.swift in Sources */,
 				F0DF6B27297E4FDD00351C84 /* SplashScreenView.swift in Sources */,
 				F0A203B1297E9D4D002FB6B3 /* URL+Extension.swift in Sources */,
+				F0A203DD297FC9E3002FB6B3 /* TabBarView.swift in Sources */,
 				F0A203BB297F7EB3002FB6B3 /* ApiError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
