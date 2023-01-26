@@ -45,6 +45,8 @@
 		F0DF6B18297E3FE300351C84 /* OrnnUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DF6B17297E3FE300351C84 /* OrnnUITests.swift */; };
 		F0DF6B1A297E3FE300351C84 /* OrnnUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DF6B19297E3FE300351C84 /* OrnnUITestsLaunchTests.swift */; };
 		F0DF6B27297E4FDD00351C84 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DF6B26297E4FDD00351C84 /* SplashScreenView.swift */; };
+		F0DFEEC1298295320016D4B3 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DFEEC0298295320016D4B3 /* CacheManager.swift */; };
+		F0DFEEC42982970E0016D4B3 /* KeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DFEEC32982970E0016D4B3 /* KeyManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +104,8 @@
 		F0DF6B17297E3FE300351C84 /* OrnnUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrnnUITests.swift; sourceTree = "<group>"; };
 		F0DF6B19297E3FE300351C84 /* OrnnUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrnnUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F0DF6B26297E4FDD00351C84 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		F0DFEEC0298295320016D4B3 /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
+		F0DFEEC32982970E0016D4B3 /* KeyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -312,11 +316,11 @@
 				F0A203E7297FEBB5002FB6B3 /* Info.plist */,
 				F0DF6AFE297E3FE100351C84 /* ContentView.swift */,
 				F0DF6AFC297E3FE100351C84 /* OrnnApp.swift */,
-				F0DF6B26297E4FDD00351C84 /* SplashScreenView.swift */,
 				F0DF6B00297E3FE300351C84 /* Assets.xcassets */,
 				F0A203B2297E9DA9002FB6B3 /* Constant */,
 				F0A203E4297FE79E002FB6B3 /* Deeplink */,
 				F0A203AF297E9D2D002FB6B3 /* Extension */,
+				F0DFEEBF298294FD0016D4B3 /* Manager */,
 				F0DF6B37297E6A0D00351C84 /* Model */,
 				F0DF6B02297E3FE300351C84 /* Preview Content */,
 				F0DF6B2D297E54D900351C84 /* Repository */,
@@ -369,9 +373,10 @@
 		F0DF6B29297E540C00351C84 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				F0A203E2297FDBF4002FB6B3 /* HotelView.swift */,
+				F0DF6B26297E4FDD00351C84 /* SplashScreenView.swift */,
 				F0A203DC297FC9E3002FB6B3 /* TabBarView.swift */,
 				F0A203DA297FC99C002FB6B3 /* TodayView.swift */,
-				F0A203E2297FDBF4002FB6B3 /* HotelView.swift */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -446,6 +451,23 @@
 				F03DC92B297E6A6F00561829 /* AlbumsResponse.swift */,
 			);
 			path = Response;
+			sourceTree = "<group>";
+		};
+		F0DFEEBF298294FD0016D4B3 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				F0DFEEC2298296D70016D4B3 /* Enum */,
+				F0DFEEC0298295320016D4B3 /* CacheManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		F0DFEEC2298296D70016D4B3 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				F0DFEEC32982970E0016D4B3 /* KeyManager.swift */,
+			);
+			path = Enum;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -590,9 +612,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0A203ED2980D2FA002FB6B3 /* TabBarViewModel.swift in Sources */,
+				F0DFEEC42982970E0016D4B3 /* KeyManager.swift in Sources */,
 				F0A203AE297E8FA9002FB6B3 /* AlbumsApi.swift in Sources */,
 				F0A203DB297FC99C002FB6B3 /* TodayView.swift in Sources */,
 				F0A203C4297F9640002FB6B3 /* Bundle.swift in Sources */,
+				F0DFEEC1298295320016D4B3 /* CacheManager.swift in Sources */,
 				F0A203E6297FE7B8002FB6B3 /* DeeplinkManager.swift in Sources */,
 				F0A203C1297F8C3A002FB6B3 /* AlbumModel.swift in Sources */,
 				F0A203E1297FD25A002FB6B3 /* SheetViewModel.swift in Sources */,
@@ -777,6 +801,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Ornn/Info.plist;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "We need to unlock your data.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -807,6 +832,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Ornn/Info.plist;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "We need to unlock your data.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
