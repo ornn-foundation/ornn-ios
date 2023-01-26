@@ -7,11 +7,11 @@
 
 import Foundation
 
-public extension URL {
-    static func unwrap(url: String) -> URL {
-        guard let setBaseURL = URL(string: url) else {
+extension URL {
+    static func from(string: String) -> URL {
+        guard let url = URL(string: string) else {
             fatalError("Invalid URL")
         }
-        return setBaseURL
+        return url
     }
 }

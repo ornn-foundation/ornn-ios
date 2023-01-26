@@ -25,7 +25,7 @@ struct SplashScreenView: View {
             VStack {
                 Image(systemName: "backpack.fill")
                     .font(.system(size: 80))
-                    .foregroundColor(.pink)
+                    .foregroundColor(.blue.opacity(0.7))
             }
             .scaleEffect(size)
             .opacity(opacity)

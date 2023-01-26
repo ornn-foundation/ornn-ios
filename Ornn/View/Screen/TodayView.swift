@@ -9,6 +9,7 @@ import SwiftUI
 
 struct TodayView: View {
     @EnvironmentObject var sheetViewModel: SheetViewModel
+    @EnvironmentObject var tabBarViewModel: TabBarViewModel
     @StateObject var viewModel = HomeViewModel()
 
     var body: some View {
@@ -28,9 +29,12 @@ struct TodayView: View {
                 }
                 .navigationDestination(for: AlbumModel.self) { album in
                     Text("Detail \(album.title)")
+                        .hideTabBar(isTabBar: $tabBarViewModel.isTabBar)
                 }
             }
+            .floatingButton(icon: "plus") {}
             .navigationTitle("Today")
+            .showTabBar(isTabBar: $tabBarViewModel.isTabBar, animation: true)
             .onAppear {
                 viewModel.getAlbums()
             }
@@ -41,5 +45,7 @@ struct TodayView: View {
 struct TodayView_Previews: PreviewProvider {
     static var previews: some View {
         TodayView()
+            .environmentObject(SheetViewModel())
+            .environmentObject(TabBarViewModel())
     }
 }

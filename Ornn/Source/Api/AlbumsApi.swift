@@ -17,7 +17,7 @@ extension AlbumsApi: TargetType {
         var setBaseURL: URL
         switch self {
         case .getAlbums:
-            setBaseURL = URL.unwrap(url: BaseURL.albums.url)
+            setBaseURL = URL.from(string: BaseURL.albums.url)
         }
         return setBaseURL
     }
